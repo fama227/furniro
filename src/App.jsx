@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import ProductDetail from "./components/ProductDetail";
-import CartSidebar from "./components/CartSideBar";
+import CartSidebar from './components/CartSidebar';  
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import Success from './pages/Success';
