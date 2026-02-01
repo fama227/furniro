@@ -1,5 +1,5 @@
 import React from 'react';
-import './funiro.css';
+import './Funiro.css';
 
 const FuniroHeader = () => {
   return (

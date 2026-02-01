@@ -1,6 +1,6 @@
 import React from "react";
 import ImageCard from "./ImageCard";
-import "./inspiration.css";
+import "./Inspiration.css";
 
 export default function InspirationSection() {
   return (
