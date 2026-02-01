@@ -1,0 +1,84 @@
+.success-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+    background-color: #ffffff;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.success-card {
+    background: #fff;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 600px;
+    border: 1px solid #f4f4f4;
+}
+
+/* The Animated Checkmark */
+.checkmark-wrapper {
+    width: 100px;
+    height: 100px;
+    background-color: #f9f1e7; /* Light gold background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+}
+
+.checkmark-icon {
+    font-size: 50px;
+    color: #B88E2F; /* Furniro Gold */
+}
+
+.success-card h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+.success-card p {
+    font-size: 18px;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.order-id-badge {
+    display: inline-block;
+    background-color: #f9f1e7;
+    color: #B88E2F;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Button Styling to match Shop */
+.back-shop-btn {
+    background-color: #B88E2F;
+    color: white;
+    padding: 15px 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-shop-btn:hover {
+    background-color: #967328;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 142, 47, 0.3);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

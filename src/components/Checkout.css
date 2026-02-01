@@ -1,0 +1,182 @@
+.checkout-main-container {
+    max-width: 1240px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+.checkout-flex-layout {
+    display: flex;
+    gap: 80px; /* Large gap between form and summary */
+    align-items: flex-start;
+}
+
+/* --- Left Column: Billing --- */
+.billing-details-column {
+    flex: 1;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.form-row {
+    display: flex;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.form-group label {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.form-group input, .form-select {
+    padding: 20px;
+    border: 1px solid #9F9F9F;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* --- Right Column: Summary --- */
+.order-summary-column {
+    flex: 1;
+    padding: 20px 40px;
+}
+
+.summary-header-row, .summary-data-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.summary-header-label {
+    font-size: 24px;
+}
+
+.summary-product-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.summary-item-name {
+    color: #9F9F9F;
+}
+
+.item-qty {
+    color: #000;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.total-row {
+    margin-top: 10px;
+}
+
+.gold-text-total {
+    color: #B88E2F;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #D9D9D9;
+    margin: 30px 0;
+}
+
+/* Payment Methods */
+.method-item {
+    margin-bottom: 20px;
+}
+
+.radio-label-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.method-description {
+    color: #9F9F9F;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 12px;
+    text-align: justify;
+}
+
+.gray-label {
+    color: #9F9F9F;
+    font-weight: 500;
+}
+
+.policy-text {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 30px 0;
+    line-height: 1.5;
+}
+
+.place-order-btn {
+    width: 318px; /* Specific width from design */
+    height: 64px;
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 15px; /* Makes it look like the image */
+    font-size: 20px;
+    cursor: pointer;
+    margin: 40px auto;
+    display: block; /* Centers the button */
+}
+
+.place-order-btn:hover {
+    background: #000;
+    color: #fff;
+}
+@media (max-width: 992px) {
+    .checkout-flex-layout {
+        flex-direction: column; /* Stack vertically */
+        gap: 40px;
+        padding: 0 15px;
+    }
+
+    .billing-details-column, 
+    .order-summary-column {
+        width: 100% !important; /* Take full width */
+    }
+
+    .order-summary-column {
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .form-row {
+        flex-direction: column; /* Stack First and Last name inputs */
+        gap: 0;
+    }
+}
+
+/* Adjust the Hero section for mobile */
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+
+    .place-order-btn {
+        width: 100%; /* Full width button on phones */
+    }
+}

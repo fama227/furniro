@@ -1,0 +1,151 @@
+.shop-product {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 270px;
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.shop-product:hover {
+  transform: translateY(-5px);
+}
+
+.product-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.new-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #4ECDC4;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.product-details {
+  padding: 15px;
+  background-color: white;
+}
+
+.product-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.product-pricing {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.current-price {
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.original-price {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+
+/* Ensure the container can hold the absolute overlay */
+.product-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* The dark background that appears on hover */
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 58, 58, 0.72); /* Furniro dark grey */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+/* Show the overlay when hovering over the card */
+.shop-product:hover .product-overlay {
+    opacity: 1;
+}
+
+/* Add to Cart Button Styling */
+.add-to-cart-btn {
+    background-color: #fff;
+    color: #B88E2F;
+    border: none;
+    padding: 12px 40px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 24px;
+    transition: all 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #B88E2F;
+    color: #fff;
+}
+
+/* Share, Compare, Like Styling */
+.overlay-actions {
+    display: flex;
+    gap: 20px;
+    color: #fff;
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.action-item:hover {
+    color: #B88E2F;
+}

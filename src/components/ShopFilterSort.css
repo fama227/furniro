@@ -1,0 +1,17 @@
+.shop-filter-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.filter, .sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter label, .sort label {
+  font-weight: bold;
+}

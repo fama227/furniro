@@ -1,0 +1,102 @@
+/* The inner box specifically for the Title and Description */
+.text-content-wrapper {
+  background-color: transparent; /* Keep it transparent to see the cream card */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* This creates the tight spacing between the 'Discover' text lines */
+}
+
+.text-content-wrapper h1 {
+  font-size: 52px;
+  line-height: 1.2;
+  color: #B88E2F;
+  margin: 0; /* Removing default margins to control it via the wrapper gap */
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 60px;
+  background: url('../assets/heroimg.png') no-repeat center center/cover;
+}
+
+/* The Large Cream Card */
+.hero-outer-card {
+  background-color: #FFF3E3;
+  padding: 60px; /* This creates the 'outer' padding */
+  width: 100%;
+  max-width: 643px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The 'Inner Box' for the text content */
+.text-content-wrapper {
+  /* If you want a visible border or different shade for the inner box: */
+  /* background-color: rgba(255, 255, 255, 0.3); */ /* Optional: subtle highlight */
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.text-content-wrapper h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 52px;
+  line-height: 65px;
+  color: #B88E2F;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+  font-weight: 500;
+  margin: 0;
+}
+
+.btn {
+  align-self: flex-start;
+  background-color: #B88E2F;
+  color: #fff;
+  padding: 25px 72px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #967324;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    padding-right: 0;
+  }
+  .hero-outer-card {
+    margin: 20px;
+    padding: 30px;
+  }
+  .text-content-wrapper h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}

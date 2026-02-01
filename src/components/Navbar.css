@@ -1,0 +1,92 @@
+/* Container styling */
+.navbar {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 54px; /* Removed vertical padding, using height instead */
+    background-color: #ffffff;
+    height: 80px;    /* Reduced from 100px to 80px */
+    box-sizing: border-box;
+    border-bottom: 1px solid #f0f0f0; /* Optional: adds a very faint separator */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styling */
+.logo-container {
+   display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 5px;
+}
+
+.main-logo-img {
+    height: 30px; /* Adjust based on your logo shape */
+    width: auto;
+}
+
+.logo-text {
+    font-size: 34px;
+    font-weight: 700;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Nav Links - Center alignment */
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 60px; /* Wide spacing between links */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+    color: #B88E2F;
+}
+
+/* Icons Section */
+.navbar-icons {
+    display: flex;
+    gap: 35px; /* Spacing between icons */
+    align-items: center;
+}
+
+.nav-custom-icon {
+    width: 28px; /* Standard Furniro icon size */
+    height: 28px;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+/* Badge Positioning */
+.cart-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #B88E2F;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

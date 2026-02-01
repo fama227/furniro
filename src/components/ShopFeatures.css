@@ -1,0 +1,31 @@
+.shop-features {
+  background: #fdf6ee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #333;
+}
+
+.feature-icon {
+  font-size: 32px;
+}
+
+.feature-item h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.feature-item p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #777;
+}
