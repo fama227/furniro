@@ -60,8 +60,10 @@ app.post('/api/orders', (req, res) => {
 });
 
 // 5. START SERVER
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`✅ Backend Server is running!`);
     console.log(`📡 URL: http://localhost:${PORT}/api/products`);
 });
+
+module.exports = app;
