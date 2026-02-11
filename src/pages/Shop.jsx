@@ -13,7 +13,7 @@ function Shop({ addToCart }) {
 
   useEffect(() => {
     setLoading(true);
-    fetch('api/products')
+    fetch('/api/products')
       .then((response) => response.json())
       .then((data) => {
         setProducts(data);

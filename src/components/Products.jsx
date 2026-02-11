@@ -7,7 +7,7 @@ function Products({ addToCart }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('api/products')
+    fetch('/api/products')
       .then(res => res.json())
       .then(data => setProducts(data.slice(0, 8)))
       .catch(err => console.error("Error:", err));
