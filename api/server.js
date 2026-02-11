@@ -6,7 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// 2. UNIFIED PRODUCTS DATA (Merged Home + Shop data)
+// 2. UNIFIED PRODUCTS DATA
 const products = [
   { id: 1, title: 'Syltherine', description: 'Stylish cafe chair', discountedPrice: 2500000, originalPrice: 3500000, discount: 30, isNew: false, image: '/p1.png' },
   { id: 2, title: 'Leviosa', description: 'Stylish cafe chair', discountedPrice: 2500000, originalPrice: null, discount: null, isNew: false, image: '/p2.png' },
@@ -24,46 +24,22 @@ const products = [
 
 let orders = [];
 
-// 3. GET PRODUCTS ENDPOINT
+// 3. ENDPOINTS
 app.get('/api/products', (req, res) => {
-    console.log("GET /api/products called");
     res.json(products);
 });
 
-// 4. POST NEW ORDER ENDPOINT
 app.post('/api/orders', (req, res) => {
-    try {
-        const orderData = req.body;
-        if (!orderData || !orderData.customer) {
-            return res.status(400).json({ message: "Invalid Order Data" });
-        }
-
-        const newOrder = {
-            ...orderData,
-            id: orders.length + 1,
-            date: new Date().toLocaleString()
-        };
-
-        orders.push(newOrder);
-        
-        console.log("============================");
-        console.log("NEW ORDER RECEIVED!");
-        console.log("Customer:", newOrder.customer.firstName, newOrder.customer.lastName);
-        console.log("Total Amount:", newOrder.totalAmount);
-        console.log("============================");
-
-        res.status(201).json({ message: "Order placed successfully!", orderId: newOrder.id });
-    } catch (error) {
-        console.error("Order error:", error);
-        res.status(500).json({ message: "Internal Server Error" });
-    }
+    const orderData = req.body;
+    const newOrder = { ...orderData, id: orders.length + 1, date: new Date().toLocaleString() };
+    orders.push(newOrder);
+    res.status(201).json({ message: "Order placed!", orderId: newOrder.id });
 });
 
-// 5. START SERVER
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-    console.log(`✅ Backend Server is running!`);
-    console.log(`📡 URL: http://localhost:${PORT}/api/products`);
-});
+// 4. EXPORT / START LOGIC
+if (process.env.NODE_ENV !== 'production') {
+    const PORT = 5000;
+    app.listen(PORT, () => console.log(`Local Server: http://localhost:${PORT}`));
+}
 
 module.exports = app;
