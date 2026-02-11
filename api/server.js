@@ -1,5 +1,6 @@
-const express = require('express');
-const cors = require('cors');
+import express from 'express';
+import cors from 'cors';
+
 const app = express();
 
 // 1. MIDDLEWARE
@@ -42,4 +43,5 @@ if (process.env.NODE_ENV !== 'production') {
     app.listen(PORT, () => console.log(`Local Server: http://localhost:${PORT}`));
 }
 
-module.exports = app;
+// Modern export for Vercel
+export default app;
